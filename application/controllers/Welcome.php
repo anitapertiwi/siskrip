@@ -40,6 +40,18 @@ class Welcome extends CI_Controller {
 		$this->load->view('index');
 		$this->load->view('templates/footer2',$data);
 	}
+
+	public function dosen(){
+		$data['jml'] = Array();
+		$data['agregatDosen'] = $this->Model_siskrip->countDosen();
+
+
+		$this->load->view('templates/header');
+		$this->load->view('table2',$data);
+		// $this->load->view('templates/footer');
+		$this->load->view('templates/footer2',$data);
+
+	}
 	// public function blank(){
 	// 	$this->load->view('blank');
 	// }

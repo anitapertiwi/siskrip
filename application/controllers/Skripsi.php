@@ -42,7 +42,7 @@ class Skripsi extends CI_Controller {
 
 	public function search(){
 		$data = $this->input->post();
-		$data['jml'] = NULL;
+		$data['jml'] = Array();
 
 		$data['fakultas'] = NULL;
 		if($data['jurusan'] == ""){
@@ -61,7 +61,21 @@ class Skripsi extends CI_Controller {
 		$this->load->view('table',$data);
 		$this->load->view('templates/footer2');
 	}
-	
+	public function searchDosen($dsn=NULL){
+
+		$data['fakultas'] = NULL;
+		$data['jurusan'] = NULL;
+		$data['judul'] = NULL;
+		if(isset($dsn)){
+			$data['dosen'] = rawurldecode($dsn);
+		}
+
+		$data['siskrip'] = $this->Model_siskrip->showFiltered($data['fakultas'],$data['jurusan'],$data['judul'],$data['dosen'])->result();
+		// var_dump($data);
+		$this->load->view('templates/header');
+		$this->load->view('table',$data);
+		$this->load->view('templates/footer2');
+	}
 }
 	/*public function fetchMemberData(){
 		$nim = $this->session->userdata('nim');

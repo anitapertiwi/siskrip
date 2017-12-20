@@ -47,6 +47,38 @@ class Model_siskrip extends CI_Model{
 
 		return $this->db->get();
 	}
+	public function countDosen(){
+		$indexes = Array();
+		foreach($this->showAll() as $row){
+			$key = $row->dosen_pembimbing1;
+			if($key != "" && !array_key_exists($key,$indexes)){
+				$indexes[$key] = Array(
+					"dosen" => $key,
+					"p1" => 1,
+					"p2" => 0
+				);
+			}else{
+				if(isset($indexes[$key])){
+					$indexes[$key]["p1"]+=1;
+				}
+			}
+		}
+		foreach($this->showAll() as $row){
+			$key = $row->dosen_pembimbing2;
+			if($key != "" && array_key_exists($key,$indexes)){
+				$indexes[$key] = Array(
+					"dosen" => $key,
+					"p1" => 0,
+					"p2" => 1
+				);
+			}else{
+				if(isset($indexes[$key])){
+					$indexes[$key]["p2"]+=1;
+				}			}
+		}		
+
+		return $indexes;
+	}	
 
 /*	public function showTable(){
 		$query = $this->db->get('siskrip');

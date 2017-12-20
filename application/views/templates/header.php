@@ -331,13 +331,17 @@
                                         
                                     <!--FAKULTAS SERANG-->
                                     <a href="#">Serang<span class="fa arrow"></span></a>
+                                    </li>
+                                </ul>                          
                     </li>
-                </ul>                          
-                    </li>
+                        <li>      
+                            <a class="active-menu" href="<?php echo base_url(); ?>Welcome/dosen"><i class="fa fa-user"></i>Dosen Pembimbing</a>
+                        
+                        </li>                    
                         <li>      
                             <a class="active-menu" href="<?php echo base_url(); ?>skripsi/information"><i class="fa fa-sitemap"></i>INFORMATION</a>
                         
-                        </li>                              
+                        </li>
             </div>
         </nav>
 

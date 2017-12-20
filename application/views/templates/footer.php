@@ -68,7 +68,7 @@
             var selectedItem = chart.getSelection()[0];
             if (selectedItem) {
               var value = data.getValue(selectedItem.row, 0);
-              window.location = "<?php echo base_url(); ?>/Welcome/grafik/"+value;
+              window.location = "<?php echo base_url(); ?>Welcome/grafik/"+value;
             }
           }
 
