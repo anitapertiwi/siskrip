@@ -36,7 +36,7 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['FIP', 'Jumlah'],
+          ['Data', 'Jumlah'],
           ['FIP',<?php echo $jml_FIP;?>],
           ['FPIPS',<?php echo $jml_FPIPS;?>],
           ['FPBS',<?php echo $jml_FPBS;?>],
@@ -64,8 +64,10 @@
           title: 'Jumlah Data Skripsi Mahasiswa Universitas Pendidikan Indonesia',
           width: 700 ,
           height: 500,
-          bar: {groupWidth: "95%"},
-          legend: { position: "none" }, 
+          bar: {groupWidth: "120%"},
+          legend: { position: "none" },
+          series: { 0: {color: '#da1010'}},
+          is3D: true, 
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values'));
@@ -77,11 +79,11 @@
             }
           }
 
-          // Listen for the 'select' event, and call my function selectHandler() when
-          // the user selects something on the chart.
-          google.visualization.events.addListener(chart, 'select', selectHandler);
-          chart.draw(view, options);
-          }
+        // Listen for the 'select' event, and call my function selectHandler() when
+        // the user selects something on the chart.
+        google.visualization.events.addListener(chart, 'select', selectHandler);
+        chart.draw(view, options);
+        }
       $('#siskrip').DataTable({
         responsive:true
       });

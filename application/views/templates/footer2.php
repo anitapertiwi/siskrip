@@ -42,6 +42,7 @@
           width: 1000,
           height: 700,
           bar: {groupWidth: "95%"},
+          color: ['#e0440e', '#e6693e', '#ec8f6e', '#f3b49f', '#f6c7b6'],
           legend: { position: "none" }, 
         };
 
