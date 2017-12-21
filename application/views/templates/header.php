@@ -368,6 +368,9 @@
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/Sumedang/Pendidikan Guru Pendidikan Anak Usia Dini'); ?>">Pendidikan Guru PAUD</a>
                                             </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Sumedang/Pendidikan Guru Sekolah Dasar Pendidikan Jasmani'); ?>">Pendidikan Guru Sekolah Dasar</a>
+                                            </li>
                                         </ul>
                                     </li>
                                 </ul>
