@@ -70,6 +70,7 @@ class Skripsi extends CI_Controller {
 		$data['fakultas'] = NULL;
 		$data['jurusan'] = NULL;
 		$data['judul'] = NULL;
+		$data['jml'] = array();
 		if(isset($dsn)){
 			$data['dosen'] = rawurldecode($dsn);
 		}
