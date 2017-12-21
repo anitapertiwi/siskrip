@@ -55,7 +55,7 @@ class Model_siskrip extends CI_Model{
 				$indexes[$key] = Array(
 					"dosen" => $key,
 					"p1" => 1,
-					"p2" => 0
+					"p2" => 0,
 				);
 			}else{
 				if(isset($indexes[$key])){
@@ -65,16 +65,11 @@ class Model_siskrip extends CI_Model{
 		}
 		foreach($this->showAll() as $row){
 			$key = $row->dosen_pembimbing2;
-			if($key != "" && array_key_exists($key,$indexes)){
-				$indexes[$key] = Array(
-					"dosen" => $key,
-					"p1" => 0,
-					"p2" => 1
-				);
-			}else{
+			if(array_key_exists($key,$indexes)){
 				if(isset($indexes[$key])){
 					$indexes[$key]["p2"]+=1;
-				}			}
+				}			
+			}
 		}		
 
 		return $indexes;
