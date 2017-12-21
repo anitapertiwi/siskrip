@@ -66,7 +66,7 @@
           height: 500,
           bar: {groupWidth: "120%"},
           legend: { position: "none" },
-          series: { 0: {color: '#da1010'}},
+          series: { 0: {color: '#B22222'}},
           is3D: true, 
         };
 

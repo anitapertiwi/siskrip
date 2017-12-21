@@ -42,7 +42,7 @@
           width: 1000,
           height: 700,
           bar: {groupWidth: "95%"},
-          series: { 0: {color: '#3366cc'}},
+          series: { 0: {color: '#B22222'}},
           legend: { position: "none" }, 
         };
 
