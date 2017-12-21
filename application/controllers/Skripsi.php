@@ -17,7 +17,11 @@ class Skripsi extends CI_Controller {
 		$dataFakultas['FPOK'] = "Fakultas Pendidikan Olahraga dan Kesehatan";
 		$dataFakultas['FPEB'] = "Fakultas Pendidikan Ekonomi dan Bisnis";
 		$dataFakultas['FPSD'] = "Fakultas Pendidikan Seni dan Desain";
-		$dataFakultas['SPS'] = "Sekolah Pasca Sarjana";
+		$dataFakultas['Cibiru'] = "Kampus Cibiru";
+		$dataFakultas['Tasikmalaya'] = "Kampus Tasikmalaya";
+		$dataFakultas['Serang'] = "Kampus Serang";
+		$dataFakultas['Purwakarta'] = "Kampus Purwakarta";
+		$dataFakultas['Sumedang'] = "Kampus Sumedang";
 
 		return [$dataFakultas[$fakultas],urldecode($jurusan)];
 	}

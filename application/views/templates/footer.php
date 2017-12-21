@@ -45,6 +45,11 @@
           ['FPEB',<?php echo $jml_FPEB;?>],
           ['FPOK',<?php echo $jml_FPOK;?>],
           ['FPSD',<?php echo $jml_FPSD;?>],
+          ['Cibiru',<?php echo $jml_CBR;?>],
+          ['Purwakarta',<?php echo $jml_PRW;?>],
+          ['Tasikmalaya',<?php echo $jml_TSK;?>],
+          ['Serang',<?php echo $jml_SRG;?>],
+          ['Sumedang',<?php echo $jml_SMD;?>],
         ]);
       
         var view = new google.visualization.DataView(data);

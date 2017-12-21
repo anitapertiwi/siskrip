@@ -297,9 +297,9 @@
                                     </li>
                                 </ul>
                                 <ul class="nav nav-second-level">
-                                <li>
+                            <!--     <li>
                                     <!--FAKULTAS PASCA SARJANA-->
-                                    <a href="#">Sekolah Pasca Sarjana<span class="fa arrow"></span></a>
+                           <!--          <a href="#">Sekolah Pasca Sarjana<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
                                             <li>
                                                 <a href="#">Magister (S2)</a>
@@ -308,7 +308,7 @@
                                                 <a href="#">Doctor (S3)</a>
                                             </li>
                                         </ul>
-                     </li>
+                     </li> --> 
                 </ul>
 <!--=============================================================================================================-->
                 <!--MENU Kampus 1 - Bumsil dan Fakultasnya-->
@@ -317,20 +317,72 @@
 
                             <ul class="nav nav-second-level">
                                 <li>
-                                    <!--FAKULTAS CIBIRU-->
-                                    <a href="#">Cibiru<span class="fa arrow"></span></a>
-                                        
-                                    <!--FAKULTAS TASIK-->
-                                    <a href="#">Tasikmalaya<span class="fa arrow"></span></a>
-                                        
-                                    <!--FAKULTAS SUMEDANG-->
-                                    <a href="#">Sumedang<span class="fa arrow"></span></a>
-                                        
-                                    <!--FAKULTAS PURWAKARTA-->
-                                    <a href="#">Purwakarta<span class="fa arrow"></span></a>
-                                        
-                                    <!--FAKULTAS SERANG-->
-                                    <a href="#">Serang<span class="fa arrow"></span></a>
+                                    <!--FAKULTAS FPSD-->
+                                    <a href="#">Kampus Cibiru<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Cibiru/Pendidikan Guru Sekolah Dasar'); ?>">Pendidikan Guru Sekolah Dasar</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Cibiru/Pendidikan Guru Pendidikan Anak Usia Dini'); ?>">Pendidikan Guru PAUD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-second-level">
+                                <li>
+                                    <!--FAKULTAS FPSD-->
+                                    <a href="#">Kampus Tasikmalaya<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Tasikmalaya/Pendidikan Guru Sekolah Dasar'); ?>">Pendidikan Guru Sekolah Dasar</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Tasikmalaya/Pendidikan Guru Pendidikan Anak Usia Dini'); ?>">Pendidikan Guru PAUD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-second-level">
+                                <li>
+                                    <!--FAKULTAS FPSD-->
+                                    <a href="#">Kampus Serang<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Serang/Pendidikan Guru Sekolah Dasar'); ?>">Pendidikan Guru Sekolah Dasar</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Serang/Pendidikan Guru Pendidikan Anak Usia Dini'); ?>">Pendidikan Guru PAUD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-second-level">
+                                <li>
+                                    <!--FAKULTAS FPSD-->
+                                    <a href="#">Kampus Sumedang<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Sumedang/Pendidikan Guru Sekolah Dasar'); ?>">Pendidikan Guru Sekolah Dasar</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Sumedang/Pendidikan Guru Pendidikan Anak Usia Dini'); ?>">Pendidikan Guru PAUD</a>
+                                            </li>
+                                        </ul>
+                                    </li>
+                                </ul>
+                                <ul class="nav nav-second-level">
+                                <li>
+                                    <!--FAKULTAS FPSD-->
+                                    <a href="#">Kampus Purwakarta<span class="fa arrow"></span></a>
+                                        <ul class="nav nav-third-level">
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Purwakarta/Pendidikan Guru Sekolah Dasar'); ?>">Pendidikan Guru Sekolah Dasar</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/Purwakarta/Pendidikan Guru Pendidikan Anak Usia Dini'); ?>">Pendidikan Guru PAUD</a>
+                                            </li>
+                                        </ul>
                                     </li>
                                 </ul>                          
                     </li>

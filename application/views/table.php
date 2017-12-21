@@ -26,8 +26,8 @@
                                             <th>Judul</th>
                                             <th>Jurusan</th>
                                             <th>Fakultas</th>
-                                            <th>Dosen Pembimbing</th>
-                                            <th>Dosen Pembimbing</th>
+                                            <th>Dosen Pembimbing 1</th>
+                                            <th>Dosen Pembimbing 2</th>
                                             <th>Abstrak</th>
                                         </tr>
                                     </thead>

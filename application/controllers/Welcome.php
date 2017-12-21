@@ -28,7 +28,12 @@ class Welcome extends CI_Controller {
 		$data['jml_FPOK'] = $this->Model_siskrip->showFiltered($fakultas='Fakultas Pendidikan Olahraga dan Kesehatan')->num_rows();
 		$data['jml_FPEB'] = $this->Model_siskrip->showFiltered($fakultas='Fakultas Pendidikan Ekonomi dan Bisnis')->num_rows();
 		$data['jml_FPSD'] = $this->Model_siskrip->showFiltered($fakultas='Fakultas Pendidikan Seni dan Desain')->num_rows();
-		
+		$data['jml_CBR'] = $this->Model_siskrip->showFiltered($fakultas='Kampus Cibiru')->num_rows();
+		$data['jml_PRW'] = $this->Model_siskrip->showFiltered($fakultas='Kampus Purwakarta')->num_rows();
+		$data['jml_TSK'] = $this->Model_siskrip->showFiltered($fakultas='Kampus Tasikmalaya')->num_rows();
+		$data['jml_SRG'] = $this->Model_siskrip->showFiltered($fakultas='Kampus Serang')->num_rows();
+		$data['jml_SMD'] = $this->Model_siskrip->showFiltered($fakultas='Kampus Sumedang')->num_rows();
+
 		$this->load->view('templates/header');
 		$this->load->view('index');
 		$this->load->view('templates/footer',$data);
