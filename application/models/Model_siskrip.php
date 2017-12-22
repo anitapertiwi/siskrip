@@ -47,6 +47,16 @@ class Model_siskrip extends CI_Model{
 
 		return $this->db->get();
 	}
+	public function countFakultas(){
+		$this->db->select("fakultas,tahun_wisuda,count(*)");
+		// $this->db->distinct('tahun_wisuda');
+		$this->db->from('siskrip');
+		// $this->db->distinct('tahun_wisuda');
+		$this->db->group_by('fakultas');
+		$this->db->group_by('tahun_wisuda');
+
+		return $this->db->get();
+	}
 	public function countDosen(){
 		$indexes = Array();
 		foreach($this->showAll() as $row){
@@ -74,7 +84,16 @@ class Model_siskrip extends CI_Model{
 
 		return $indexes;
 	}	
+	public function getTW(){
+		$this->db->select("tahun_wisuda");
+		// $this->db->distinct('tahun_wisuda');
+		$this->db->from('siskrip');
+		// $this->db->distinct('tahun_wisuda');
+		// $this->db->group_by('fakultas');
+		$this->db->group_by('tahun_wisuda');
 
+		return $this->db->get();		
+	}
 /*	public function showTable(){
 		$query = $this->db->get('siskrip');
 		if($query->num_rows() > 0){

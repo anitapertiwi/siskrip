@@ -36,38 +36,29 @@
       function drawChart() {
 
         var data = google.visualization.arrayToDataTable([
-          ['Data', 'Jumlah'],
-          ['FIP',<?php echo $jml_FIP;?>],
-          ['FPIPS',<?php echo $jml_FPIPS;?>],
-          ['FPBS',<?php echo $jml_FPBS;?>],
-          ['FPMIPA',<?php echo $jml_FPMIPA;?>],
-          ['FPTK',<?php echo $jml_FPTK;?>],
-          ['FPEB',<?php echo $jml_FPEB;?>],
-          ['FPOK',<?php echo $jml_FPOK;?>],
-          ['FPSD',<?php echo $jml_FPSD;?>],
-          ['Cibiru',<?php echo $jml_CBR;?>],
-          ['Purwakarta',<?php echo $jml_PRW;?>],
-          ['Tasikmalaya',<?php echo $jml_TSK;?>],
-          ['Serang',<?php echo $jml_SRG;?>],
-          ['Sumedang',<?php echo $jml_SMD;?>],
+          ['Data' <?php foreach($years as $y){echo ",'".$y['tahun_wisuda']."'";} ?>],
+          <?php foreach($jml as $key => $i){
+                echo "['".$key."'"; 
+                foreach($years as $j){?>
+                  <?php if(isset($i[$j['tahun_wisuda']])){ echo ",".$i[$j['tahun_wisuda']];}else{echo ",0";} ?>
+          <?php }
+                echo "],";
+                  } ?>
+          // ['FIP',10,20,'FIP'],
+          // ['FPA',10,20,'FPA'],
+
         ]);
       
-        var view = new google.visualization.DataView(data);
-        view.setColumns ([0, 1,
-                  { calc: "stringify",
-                   sourceColumn: 1,
-                   type: "string",
-                   role: "annotation" }
-                ]);
 
         var options = {
           title: 'Jumlah Data Skripsi Mahasiswa Universitas Pendidikan Indonesia',
-          width: 700 ,
-          height: 500,
-          bar: {groupWidth: "120%"},
-          legend: { position: "none" },
-          series: { 0: {color: '#B22222'}},
-          is3D: true, 
+          width: 1000 ,
+          height: 700 ,
+          // height: 500,
+          bar: {groupWidth: "90%"},
+          // legend: { position: "none" },
+          // series: { 0: {color: '#B22222'},1:{color: 'blue'}},  
+          // is3D: true, 
         };
 
         var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values'));
@@ -82,7 +73,7 @@
         // Listen for the 'select' event, and call my function selectHandler() when
         // the user selects something on the chart.
         google.visualization.events.addListener(chart, 'select', selectHandler);
-        chart.draw(view, options);
+        chart.draw(data, options);
         }
       $('#siskrip').DataTable({
         responsive:true
