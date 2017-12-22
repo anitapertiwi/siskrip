@@ -22,20 +22,25 @@
                                     <thead>
                                         <tr>
                                             <th>NIM</th>
+                                            <th>Tahun Lulus</th>
                                             <th>Penulis</th>
+                                            <th>E-mail</th>
                                             <th>Judul</th>
                                             <th>Jurusan</th>
                                             <th>Fakultas</th>
                                             <th>Dosen Pembimbing 1</th>
                                             <th>Dosen Pembimbing 2</th>
                                             <th>Abstrak</th>
+
                                         </tr>
                                     </thead>
                                     <tbody>
                                         <?php foreach ($siskrip as $datasiskrip) : ?>
                                         <tr>
                                             <td><?php echo"$datasiskrip->nim" ?></td>
+                                            <td><?php echo"$datasiskrip->tahun_wisuda" ?></td>                                            
                                             <td><?php echo"$datasiskrip->penulis" ?></td>
+                                            <td><?php echo"$datasiskrip->email" ?></td>
                                             <td><?php echo"$datasiskrip->judul" ?></td>
                                             <td><?php echo"$datasiskrip->jurusan" ?></td>
                                             <td><?php echo"$datasiskrip->fakultas" ?></td>
