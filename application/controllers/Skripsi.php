@@ -22,7 +22,7 @@ class Skripsi extends CI_Controller {
 		$dataFakultas['Serang'] = "Kampus Serang";
 		$dataFakultas['Purwakarta'] = "Kampus Purwakarta";
 		$dataFakultas['Sumedang'] = "Kampus Sumedang";
-
+		$dataFakultas['SPSS'] = "Sekolah Pascasarjana";
 		return [$dataFakultas[$fakultas],urldecode($jurusan)];
 	}
 
