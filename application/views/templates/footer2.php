@@ -21,6 +21,7 @@
         modal.find('.modal-title').text('Detail Penulis')
         modal.find('.modal-body input').val(recipient)
         modal.find('#labelNIM').text(button.data('nim'))
+        modal.find('#labelTahun').text(button.data('tahun'))
         modal.find('#labelPenulis').text(button.data('penulis'))
         modal.find('#labelEmail').text(button.data('email'))
         modal.find('#labelJudul').text(button.data('judul'))
