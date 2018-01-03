@@ -392,7 +392,11 @@
                         <li>      
                             <a class="active-menu" href="<?php echo base_url(); ?>Welcome/dosen"><i class="fa fa-user"></i>Dosen Pembimbing</a>
                         
-                        </li>                    
+                        </li>
+                        <li>      
+                            <a class="active-menu" href="<?php echo base_url(); ?>Welcome/fakultasTabel"><i class="fa fa-user"></i>Jumlah Skripsi Fakultas</a>
+                        
+                        </li>                       
                         <li>      
                             <a class="active-menu" href="<?php echo base_url(); ?>skripsi/information"><i class="fa fa-sitemap"></i>INFORMATION</a>
                         

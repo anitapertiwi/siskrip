@@ -83,6 +83,18 @@ class Welcome extends CI_Controller {
 		$this->load->view('templates/footer2',$data);
 
 	}
+
+	public function fakultasTabel(){
+		$data['jml'] = Array();
+		$data['agregatFakultas'] = $this->Model_siskrip->countFakultasTabel();
+		$this->Model_siskrip->countFakultasTabel()->result();
+		$this->load->view('templates/header');
+		$this->load->view('table3',$data);
+		// $this->load->view('templates/footer');
+		$this->load->view('templates/footer2',$data);
+
+	}
+
 	public function blank(){
 		
 		$x = $this->Model_siskrip->countFakultas()->result_array();
