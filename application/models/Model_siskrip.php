@@ -25,6 +25,30 @@ class Model_siskrip extends CI_Model{
 
 
 		if(isset($jurusan))
+			$this->db->where("jurusan", $jurusan);
+
+		if(isset($judul))
+			$this->db->where("judul like '%".$judul."%'");
+
+
+		if(isset($dosen)){
+			$where = "(dosen_pembimbing1 like '%".$dosen."%' or dosen_pembimbing2 like '%".$dosen."%')";
+			$this->db->where($where);
+		}
+		//$this->db->where_not_in('fakultas!="Sekolah Pascasarjana"');
+		return $this->db->get();
+	}
+
+	public function searchFiltered($fakultas = NULL,$jurusan = NULL,$judul = NULL, $dosen= NULL){
+		$this->db->select("*");
+		$this->db->from('siskrip');
+		if(isset($fakultas)){
+			$this->db->where('fakultas',$fakultas);
+			$this->db->order_by('jurusan','ASC');
+		}
+
+
+		if(isset($jurusan))
 			$this->db->where("jurusan like '%".$jurusan."%'");
 
 		if(isset($judul))
@@ -62,6 +86,14 @@ class Model_siskrip extends CI_Model{
 		$this->db->select("fakultas, count(*) as 'num' ");
 		$this->db->from('siskrip');
 		$this->db->group_by('fakultas');
+
+		return $this->db->get();
+	}
+
+	public function countJurusanTabel(){
+		$this->db->select("jurusan, count(*) as 'num' ");
+		$this->db->from('siskrip');
+		$this->db->group_by('jurusan');
 
 		return $this->db->get();
 	}

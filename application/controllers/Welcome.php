@@ -75,8 +75,6 @@ class Welcome extends CI_Controller {
 	public function dosen(){
 		$data['jml'] = Array();
 		$data['agregatDosen'] = $this->Model_siskrip->countDosen();
-
-
 		$this->load->view('templates/header');
 		$this->load->view('table2',$data);
 		// $this->load->view('templates/footer');
@@ -86,10 +84,21 @@ class Welcome extends CI_Controller {
 
 	public function fakultasTabel(){
 		$data['jml'] = Array();
-		$data['agregatFakultas'] = $this->Model_siskrip->countFakultasTabel();
-		$this->Model_siskrip->countFakultasTabel()->result();
+		$data['agregatFakultas'] = $this->Model_siskrip->countFakultasTabel()->result();
+		//$this->Model_siskrip->countFakultasTabel()->result();
 		$this->load->view('templates/header');
 		$this->load->view('table3',$data);
+		// $this->load->view('templates/footer');
+		$this->load->view('templates/footer2',$data);
+
+	}
+
+	public function jurusanTabel(){
+		$data['jml'] = Array();
+		$data['agregatJurusan'] = $this->Model_siskrip->countJurusanTabel()->result();
+		//$this->Model_siskrip->countJurusanTabel($this->praProcess($fakultas))->result();
+		$this->load->view('templates/header');
+		$this->load->view('table4',$data);
 		// $this->load->view('templates/footer');
 		$this->load->view('templates/footer2',$data);
 

@@ -59,12 +59,13 @@ class Skripsi extends CI_Controller {
 			$data['dosen'] = NULL;
 		}		
 
-		$data['siskrip'] = $this->Model_siskrip->showFiltered($data['fakultas'],$data['jurusan'],$data['judul'],$data['dosen'])->result();
+		$data['siskrip'] = $this->Model_siskrip->searchFiltered($data['fakultas'],$data['jurusan'],$data['judul'],$data['dosen'])->result();
 		// var_dump($data);
 		$this->load->view('templates/header');
 		$this->load->view('table',$data);
 		$this->load->view('templates/footer2');
 	}
+	
 	public function searchDosen($dsn=NULL){
 
 		$data['fakultas'] = NULL;

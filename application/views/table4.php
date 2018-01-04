@@ -3,7 +3,7 @@
             <div id="page-inner">
                 <div class="row">
                     <div class="col-md-12">
-                     <h2>Jumlah Skripsi Fakultas</h2>                          
+                     <h2>Jumlah Skripsi Jurusan</h2>                          
                     </div>
                 </div>
                  <!-- /. ROW  -->
@@ -20,15 +20,15 @@
                                 <table class="table table-striped table-bordered table-hover" id="siskrip">
                                     <thead>
                                         <tr>
-                                            <th>Fakultas</th>
+                                            <th>Program Studi</th>
                                             <th>Jumlah</th>
                                         </tr>
                                     </thead>
                                     <tbody>
-                                        <?php foreach ($agregatFakultas as $datasiskrip) : ?>
+                                        <?php foreach ($agregatJurusan as $datasiskrip) : ?>
                                     
                                         <tr>
-                                            <td><?php echo $datasiskrip->fakultas ?></td>
+                                            <td><?php echo $datasiskrip->jurusan ?></td>
                                             <td><?php echo $datasiskrip->num ?></td>
                                         </tr>    
                                         <?php endforeach; ?>                       

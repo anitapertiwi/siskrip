@@ -3,7 +3,7 @@
 <head>
       <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portal Judul Skripsi</title>
+    <title>Portal Skripsi Mahasiswa</title>
 
 	<!-- BOOTSTRAP STYLES-->
     <link href="<?php echo base_url("assets/css/bootstrap.css"); ?>" rel="stylesheet" />
@@ -61,13 +61,13 @@
 
                             
                                             <li>
-                                                <a  href="<?php echo base_url('Skripsi/index/FIP/Kurikulum dan Teknologi Pendidikan'); ?>">Kurikulum dan Teknologi Pendidikan</a>
+                                                <a  href="<?php echo base_url('Skripsi/index/FIP/Teknologi Pendidikan'); ?>">Teknologi Pendidikan</a>
                                             </li>
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FIP/Administrasi Pendidikan'); ?>">Administrasi Pendidikan</a>
                                             </li>
                                             <li>
-                                                <a href="<?php echo base_url('Skripsi/index/FIP/Psikologi Pendidikan dan Bimbingan'); ?>">Psikologi Pendidikan dan Bimbingan</a>
+                                                <a href="<?php echo base_url('Skripsi/index/FIP/Psikologi Pendidikan'); ?>">Psikologi Pendidikan</a>
                                             </li>
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FIP/Pendidikan Luar Sekolah'); ?>">Pendidikan Luar Sekolah</a>
@@ -82,7 +82,10 @@
                                                 <a href="<?php echo base_url('Skripsi/index/FIP/Perpustakaan dan Informasi'); ?>">Perpustakaan dan Informasi</a>
                                             </li>
                                             <li>
-                                                <a href="<?php echo base_url('Skripsi/index/FIP/Pedagogik'); ?>">Pedagogik</a>
+                                                <a href="<?php echo base_url('Skripsi/index/FIP/Pendidikan Guru Sekolah Dasar'); ?>">PGSD</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FIP/Pendidikan Guru Pendidikan Anak Usia Dini'); ?>">PGPAUD</a>
                                             </li>
                                         </ul> 
                                     </li>
@@ -105,7 +108,7 @@
                                                 <a href="<?php echo base_url('Skripsi/index/FPIPS/Survey Pemetaan dan Ilmu Geografi'); ?>">Survey Pemetaan dan Informasi Geografi (SPIG)</a>
                                             </li> 
                                             <li>
-                                                <a href="<?php echo base_url('Skripsi/index/FPIPS/Pendidikan IPS'); ?>">Pendidikan IPS</a>
+                                                <a href="<?php echo base_url('Skripsi/index/FPIPS/Pendidikan Ilmu Pengetahuan Sosial'); ?>">Pendidikan IPS</a>
                                             </li>
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FPIPS/Manajemen Resort and Leisure'); ?>">Manajemen Resort and Leisure (MRL)</a>
@@ -134,7 +137,7 @@
                                     <a href="#">FPBS<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
                                             <li>
-                                                <a href="<?php echo base_url('Skripsi/index/FPBS/Pendidikan Bahasa Indonesia'); ?>">Pendidikan Bahasa Indonesia</a>
+                                                <a href="<?php echo base_url('Skripsi/index/FPBS/Pendidikan Bahasa dan Sastra Indonesia'); ?>">Pendidikan Bahasa dan Sastra Indonesia</a>
                                             </li>
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FPBS/Bahasa dan Sastra Indonesia'); ?>">Bahasa dan Sastra Indonesia</a>
@@ -213,19 +216,37 @@
                                     <a href="#">FPTK<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
                                             <li>
-                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknik Sipil'); ?>">Pendidikan Teknik Sipil</a>
+                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknik Sipil'); ?>">Pendidikan Teknik Bangunan</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Teknik Sipil'); ?>">Teknik Sipil</a>
                                             </li>
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknik Arsitektur'); ?>">Pendidikan Teknik Arsitektur</a>
                                             </li>
                                             <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Teknik Arsitektur'); ?>">Teknik Arsitektur</a>
+                                            </li>
+                                            <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknik Elektro'); ?>">Pendidikan Teknik Elektro</a>
                                             </li>
                                             <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknik Elektro'); ?>">Teknik Elektro</a>
+                                            </li>
+                                            <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknik Mesin'); ?>">Pendidikan Teknik Mesin</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknik Mesin'); ?>">Teknik Mesin</a>
                                             </li> 
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Kesejahteraan Keluarga'); ?>">Pendidikan Kesejahteraan Keluarga</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Tata Boga'); ?>">Pendidikan Tata Boga</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Tata Busana'); ?>">Pendidikan Tata Busana</a>
                                             </li>
                                             <li>
                                                 <a href="<?php echo base_url('Skripsi/index/FPTK/Pendidikan Teknologi Agroindustri'); ?>">Pendidikan Teknologi Agroindustri</a>
@@ -239,13 +260,16 @@
                                     <a href="#">FPOK<span class="fa arrow"></span></a>
                                         <ul class="nav nav-third-level">
                                             <li>
-                                                <a href="#">Pendidikan Olahraga</a>
+                                                 <a href="<?php echo base_url('Skripsi/index/FPOK/Pendidikan Kepelatihan Olahraga'); ?>">Pendidikan Kepelatihan Olahraga</a>
                                             </li>
                                             <li>
-                                                <a href="#">Pendidikan Kesehatan dan Rekreasi</a>
+                                                <a href="<?php echo base_url('Skripsi/index/FPOK/Pendidikan Jasmani Kesehatan dan Rekreasi'); ?>">Pendidikan Jasmani, Kesehatan, dan Rekreasi</a>
                                             </li>
                                             <li>
-                                                <a href="#">Pendidikan Kepelatihan</a>
+                                                <a href="<?php echo base_url('Skripsi/index/FPOK/Pendidikan Guru Sekolah Dasar Pendidikan Jasmani'); ?>">Pendidikan Guru Sekolah Dasar Pendidikan Jasmani</a>
+                                            </li>
+                                            <li>
+                                                <a href="<?php echo base_url('Skripsi/index/FPOK/Ilmu Keolahragaan'); ?>">Ilmu Keolahragaan</a>
                                             </li>
                                         </ul>
                                         </li>
@@ -390,13 +414,21 @@
                                 </ul>                          
                     </li>
                         <li>      
-                            <a class="active-menu" href="<?php echo base_url(); ?>Welcome/dosen"><i class="fa fa-user"></i>Dosen Pembimbing</a>
+                            <a class="active-menu" href="<?php echo base_url(); ?>Welcome/dosen"><i class="fa fa-user"></i>DOSEN PEMBIMBING</a>
                         
                         </li>
-                        <li>      
-                            <a class="active-menu" href="<?php echo base_url(); ?>Welcome/fakultasTabel"><i class="fa fa-user"></i>Jumlah Skripsi Fakultas</a>
+
+                        <li>
+                            <a href="#"><i class="fa fa-th-list" aria-hidden="true"></i>JUMLAH SKRIPSI<span class="fa arrow"></span></a>
+                                <ul class="nav nav-second-level">
+                                    <li>      
+                                        <a href="<?php echo base_url(); ?>Welcome/fakultasTabel"></i>Fakultas</a>
+                                    </li>
+                                    <li>      
+                                        <a href="<?php echo base_url(); ?>Welcome/jurusanTabel"></i>Jurusan</a>
+                                    </li>   
+                                </ul>                    
                         
-                        </li>                       
                         <li>      
                             <a class="active-menu" href="<?php echo base_url(); ?>skripsi/information"><i class="fa fa-sitemap"></i>INFORMATION</a>
                         
