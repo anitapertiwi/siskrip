@@ -32,7 +32,54 @@
         modal.find('#labelAbstrak').text(button.data('abstrak'))
       });</script>
     <script>
-    
+    google.charts.load('current', {'packages':['corechart']});
+      google.charts.setOnLoadCallback(drawChart);
+        
+      function drawChart() {
+        
+        var data = google.visualization.arrayToDataTable([
+         ['Data' <?php foreach($years as $y){echo ",'".$y['tahun_wisuda']."'";} ?>],
+          <?php foreach($jml as $key => $i){
+                echo "['".$key."'"; 
+                foreach($years as $j){?>
+                  <?php if(isset($i[$j['tahun_wisuda']])){ echo ",".$i[$j['tahun_wisuda']];}else{echo ",0";} ?>
+          <?php }
+                echo "],";
+                  } ?>
+
+        ]);
+      
+        // var view = new google.visualization.DataView(data);
+        // view.setColumns ([0, 1,
+        //           { calc: "stringify",
+        //            sourceColumn: 1,
+        //            type: "string",
+        //            role: "annotation" }
+        //         ]);
+
+        var options = {
+          title: 'Jumlah Data Skripsi Mahasiswa '+'<?php echo $this->uri->segment(3); ?>',
+          width: 1000,
+          height: 700,
+          bar: {groupWidth: "95%"},
+          // series: { 0: {color: '#B22222'}},
+          // legend: { position: "none" }, 
+        };
+
+        var chart = new google.visualization.ColumnChart(document.getElementById('columnchart_values'));
+          function selectHandler() {
+            var selectedItem = chart.getSelection()[0];
+            if (selectedItem) {
+              var value = data.getValue(selectedItem.row, 0);
+              window.location = "<?php echo base_url('Skripsi/index/'.$this->uri->segment(3)); ?>/"+value;
+            }
+          }
+
+          // Listen for the 'select' event, and call my function selectHandler() when
+          // the user selects something on the chart.
+          google.visualization.events.addListener(chart, 'select', selectHandler);
+          chart.draw(data, options);
+          }
       $('#siskrip').DataTable({
         responsive:true
       });

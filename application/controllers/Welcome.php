@@ -66,11 +66,27 @@ class Welcome extends CI_Controller {
 	}
 	
 	public function grafik($fakultas){
-		$x = $this->Model_siskrip->countJurusan()->result_array();
-				$data['jml'] = $this->Model_siskrip->countJurusan($this->praProcess($fakultas))->result_array();
+		$x = $this->Model_siskrip->countJurusan($this->dataFakultas[$fakultas])->result_array();
+		// echo "<pre>";
+		// print_r($x);
+		// echo "</pre>";
+		$data['years'] = $this->Model_siskrip->getTW()->result_array();
+		$indexes = Array();
+		foreach($x as $i){
+			$indexes[$i['jurusan']][$i['tahun_wisuda']] = $i['count(*)'];
+		}
+		$fix = array();
+		foreach($indexes as $key=>$i){
+			// var_dump(array_search($key,$this->toUpper()));
+			$fix[$key] = $i; 
+		}
+		$data['jml'] = $fix;
+
+		// $x = $this->Model_siskrip->countJurusan()->result_array();
+		// $data['jml'] = $this->Model_siskrip->countJurusan($this->praProcess($fakultas))->result_array();
 		$this->load->view('templates/header');
 		$this->load->view('index');
-		$this->load->view('templates/footer2',$data);
+		$this->load->view('templates/footer3',$data);
 	}
 
 	public function dosen(){
