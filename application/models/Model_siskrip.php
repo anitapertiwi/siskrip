@@ -64,10 +64,11 @@ class Model_siskrip extends CI_Model{
 	}
 
 	public function countJurusan($fakultas){
-		$this->db->select("jurusan, count(*) as 'num' ");
+		$this->db->select("jurusan, tahun_wisuda, count(*)");
 		$this->db->from('siskrip');
 		$this->db->where('fakultas',$fakultas);
 		$this->db->group_by('jurusan');
+		$this->db->group_by('tahun_wisuda');
 
 		return $this->db->get();
 	}

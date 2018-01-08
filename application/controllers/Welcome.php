@@ -66,7 +66,8 @@ class Welcome extends CI_Controller {
 	}
 	
 	public function grafik($fakultas){
-		$data['jml'] = $this->Model_siskrip->countJurusan($this->praProcess($fakultas))->result_array();
+		$x = $this->Model_siskrip->countJurusan()->result_array();
+				$data['jml'] = $this->Model_siskrip->countJurusan($this->praProcess($fakultas))->result_array();
 		$this->load->view('templates/header');
 		$this->load->view('index');
 		$this->load->view('templates/footer2',$data);
@@ -104,7 +105,7 @@ class Welcome extends CI_Controller {
 
 	}
 
-	public function blank(){
+/*	public function blank(){
 		
 		$x = $this->Model_siskrip->countFakultas()->result_array();
 		$y = $this->Model_siskrip->getTW()->result_array();
@@ -115,7 +116,7 @@ class Welcome extends CI_Controller {
 		echo "<pre>";
 		print_r($indexes);
 		echo "</pre>";
-	}
+	}*/
 	// public function chart(){
 	// 	$this->load->view('chart');
 	// }

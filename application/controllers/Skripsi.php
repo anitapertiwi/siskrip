@@ -35,8 +35,8 @@ class Skripsi extends CI_Controller {
 		// $this->load->view('templates/footer');
 		$this->load->view('templates/footer2');
 	}
-	public function information($fakultas = NULL, $jurusan = NULL){
-		$data['jml'] = Array();
+	public function information(){
+//		$data['jml'] = Array();
 
 		$this->load->view('templates/header');
 		$this->load->view('templates/information');
